@@ -1,0 +1,30 @@
+<h1>Categoria <%= @recipe_category.name %> </h1>
+<h2>Receitas da categoria</h2>
+<%= @recipes_in_category.each do |recipe| %>
+  <div class="card border-0 shadow-lg my-3">
+    <div class="card-header">
+      <h3><%= recipe.title%></h3>
+    </div>
+    <div class="card-body">
+      <p class="strong"> Tempo de preparo: <%= recipe.cook_time %> minutos </p>
+      <p class="strong"> Ingredientes: <%= recipe.ingredients %> </p>
+      <h4>Forma de preparo</h4>
+      <p><%= recipe.instructions%></p>
+    </div>
+  </div>
+<% end %>
+
+<h2>Receitas fora categoria</h2>
+<%= @recipes_out_category.each do |recipe| %>
+  <div class="card border-0 shadow-lg my-3">
+    <div class="card-header">
+      <h3><%= recipe.title%></h3>
+    </div>
+    <div class="card-body">
+      <p class="strong"> Tempo de preparo: <%= recipe.cook_time %> minutos </p>
+      <p class="strong"> Ingredientes: <%= recipe.ingredients %> </p>
+      <h4>Forma de preparo</h4>
+      <p><%= recipe.instructions%></p>
+    </div>
+  </div>
+<% end %>

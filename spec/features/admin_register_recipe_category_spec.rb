@@ -11,7 +11,7 @@ feature 'Admin registra categoria de receita' do
       fill_in 'Nome', with: 'Happy Hour'
       click_on 'Salvar'
 
-      expect(current_path).to eq recipe_category_path
+      expect(current_path).to eq recipe_categories_path
       expect(page).to have_content 'Happy Hour'
       expect(page).to have_content 'Categoria de receita cadastrada com sucesso'
     end
