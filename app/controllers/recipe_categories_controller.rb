@@ -18,7 +18,7 @@ class RecipeCategoriesController < ApplicationController
 
   def show
     @recipe_category = RecipeCategory.find(params[:id])
-    @recipes_in_category = Recipe.where()
+    @recipes_in_category = Recipe.where(recipe_categories: @recipe_category)
     @recipes_out_category = Recipe.where()
   end
 

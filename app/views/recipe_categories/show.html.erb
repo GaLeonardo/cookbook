@@ -1,6 +1,6 @@
 <h1>Categoria <%= @recipe_category.name %> </h1>
 <h2>Receitas da categoria</h2>
-<%= @recipes_in_category.each do |recipe| %>
+<% @recipes_in_category.each do |recipe| %>
   <div class="card border-0 shadow-lg my-3">
     <div class="card-header">
       <h3><%= recipe.title%></h3>
@@ -15,7 +15,7 @@
 <% end %>
 
 <h2>Receitas fora categoria</h2>
-<%= @recipes_out_category.each do |recipe| %>
+<% @recipes_out_category.each do |recipe| %>
   <div class="card border-0 shadow-lg my-3">
     <div class="card-header">
       <h3><%= recipe.title%></h3>
